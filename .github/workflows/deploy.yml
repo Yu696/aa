@@ -9,6 +9,8 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # 允许 GITHUB_TOKEN 推送 gh-pages 分支
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
